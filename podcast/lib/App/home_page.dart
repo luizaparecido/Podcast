@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:podcast/App/podcast_screen.dart';
-
-
-
-import 'custom_color.dart';
+import 'package:podcast/App/custom_color.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -110,9 +107,9 @@ class _HomePageState extends State<HomePage> {
               ),
               Center(
                 child: Container(
-                  padding: EdgeInsets.fromLTRB(25, 30, 25, 0),
+                  padding: const EdgeInsets.fromLTRB(25, 30, 25, 0),
                   child: const Text(
-                    "Podcasts Recentes",
+                    "Melhores Podcasts",
                     style: TextStyle(
                       fontSize: 20,
                     ),
@@ -154,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                           title: "Iron Maiden",
                           description: "Heavy Metal",
                           click: () {},
-                          icon: const Icon(
+                          icon:  Icon(
                             Icons.play_arrow,
                             color: Colors.white,
                           ),
@@ -162,11 +159,11 @@ class _HomePageState extends State<HomePage> {
                         ),
                         const SizedBox(height: 20),
                         PodcastWidget(
-                          img: "LedZeppelin.jpg",
+                          img: "assets/lz.jpg",
                           title: "Led Zeppelin",
                           description: "Rock and Roll",
                           click: () {},
-                          icon: const Icon(Icons.play_arrow_rounded,
+                          icon:  Icon(Icons.play_arrow_rounded,
                               color: Colors.white),
                           color: CustomColor.black700,
                         ),
@@ -176,7 +173,7 @@ class _HomePageState extends State<HomePage> {
                           title: "Metallica",
                           description: "Trash Metal",
                           click: () {},
-                          icon: const Icon(Icons.play_arrow_rounded,
+                          icon: Icon(Icons.play_arrow_rounded,
                               color: Colors.white),
                           color: CustomColor.black700,
                         ),
@@ -206,7 +203,7 @@ class _HomePageState extends State<HomePage> {
                           title: "Mastodon",
                           description: "nova banda de heavy metal",
                           click: () {},
-                          icon: Icon(Icons.play_arrow_rounded,
+                          icon: const Icon(Icons.play_arrow_rounded,
                               color: Colors.white),
                           color: CustomColor.black700,
                         ),
@@ -258,7 +255,7 @@ class _HomePageState extends State<HomePage> {
                                         borderRadius: BorderRadius.circular(10),
                                         image: const DecorationImage(
                                             image: AssetImage(
-                                                "assets/philips.jpg"),
+                                                "assets/mao.jpg"),
                                             fit: BoxFit.cover)),
                                   ),
                                   const SizedBox(width: 20),
@@ -267,9 +264,9 @@ class _HomePageState extends State<HomePage> {
                                         CrossAxisAlignment.start,
                                     children: const [
                                       Text(
-                                        "Philips Fullstack Developer",
+                                        "Live of Rock n Roll",
                                         style: TextStyle(
-                                            fontSize: 15, color: Colors.white),
+                                            fontSize: 15, color: Colors.grey),
                                       ),
                                       SizedBox(height: 10),
                                       Text(
@@ -302,7 +299,7 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        bottomNavigationBar: BottonNavigator(),
+        bottomNavigationBar: const BottonNavigator(),
       ),
     );
   }
