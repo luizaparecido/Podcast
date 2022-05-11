@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:live_coding_dio_podcast/app/podcast/podcast_screen.dart';
-import 'package:live_coding_dio_podcast/app/util/custom_color.dart';
+import 'package:podcast/App/podcast_screen.dart';
+
+
+
+import 'custom_color.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -33,14 +36,14 @@ class _HomePageState extends State<HomePage> {
                     Stack(
                       alignment: Alignment.centerRight,
                       children: [
-                        SvgPicture.asset("assets/logo.svg",
+                        SvgPicture.asset("assets/rock.svg",
                             width: 40, height: 40)
                       ],
                     ),
                     Row(
                       children: const [
                         Text(
-                          "Dio",
+                          "Rock",
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 30,
@@ -50,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                         Text(
                           "KISS",
                           style: TextStyle(
-                            color: CustomColor.pink700,
+                            color: CustomColor.red700,
                             fontSize: 30,
                             fontWeight: FontWeight.w500,
                           ),
@@ -69,37 +72,37 @@ class _HomePageState extends State<HomePage> {
                   scrollDirection: Axis.horizontal,
                   children: const [
                     CategoryWidget(
-                      color: CustomColor.pink700,
+                      color: CustomColor.red700,
                       text: 'KISS',
                     ),
                     SizedBox(width: 10),
                     CategoryWidget(
-                      color: CustomColor.pink700,
+                      color: CustomColor.red700,
                       text: 'Iron Maiden',
                     ),
                     SizedBox(width: 10),
                     CategoryWidget(
-                      color: CustomColor.pink700,
+                      color: CustomColor.red700,
                       text: 'Led Zeppelin',
                     ),
                     SizedBox(width: 10),
                     CategoryWidget(
-                      color: CustomColor.pink700,
+                      color: CustomColor.red700,
                       text: 'Metallica',
                     ),
                     SizedBox(width: 10),
                     CategoryWidget(
-                      color: CustomColor.pink700,
+                      color: CustomColor.red700,
                       text: 'Greta Van Fleet',
                     ),
                     SizedBox(width: 10),
                     CategoryWidget(
-                      color: CustomColor.pink700,
+                      color: CustomColor.red700,
                       text: 'Ego Kill Talent',
                     ),
                     SizedBox(width: 10),
                     CategoryWidget(
-                      color: CustomColor.pink700,
+                      color: CustomColor.red700,
                       text: 'Mastodon',
                     ),
                   ],
@@ -142,80 +145,70 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.white,
                           ),
                           color: isplaying
-                              ? CustomColor.pink700
-                              : CustomColor.gray700,
+                              ? CustomColor.red700
+                              : CustomColor.black700,
                         ),
                         const SizedBox(height: 20),
                         PodcastWidget(
-                          img: "assets/impulso.jpg",
-                          title: "Impulso",
-                          description: "Como é trabalhar na Impulso",
+                          img: "assets/ironmaiden.jpg",
+                          title: "Iron Maiden",
+                          description: "Heavy Metal",
                           click: () {},
                           icon: const Icon(
                             Icons.play_arrow,
                             color: Colors.white,
                           ),
-                          color: CustomColor.gray700,
+                          color: CustomColor.black700,
                         ),
                         const SizedBox(height: 20),
                         PodcastWidget(
-                          img: "assets/avanade.jpg",
-                          title: "Avanade",
-                          description: "Como é trabalhar na Avanade",
+                          img: "LedZeppelin.jpg",
+                          title: "Led Zeppelin",
+                          description: "Rock and Roll",
                           click: () {},
                           icon: const Icon(Icons.play_arrow_rounded,
                               color: Colors.white),
-                          color: CustomColor.gray700,
+                          color: CustomColor.black700,
                         ),
                         const SizedBox(height: 20),
                         PodcastWidget(
-                          img: "assets/avanade.jpg",
-                          title: "Avanade",
-                          description: "Como é trabalhar na Avanade",
+                          img: "assets/metallica.jpg",
+                          title: "Metallica",
+                          description: "Trash Metal",
                           click: () {},
                           icon: const Icon(Icons.play_arrow_rounded,
                               color: Colors.white),
-                          color: CustomColor.gray700,
+                          color: CustomColor.black700,
                         ),
                         const SizedBox(height: 20),
                         PodcastWidget(
-                          img: "assets/avanade.jpg",
-                          title: "Avanade",
-                          description: "Como é trabalhar na Avanade",
+                          img: "assets/greta.jpg",
+                          title: "Greta Van Fleet",
+                          description: "nova banda de rock n roll",
                           click: () {},
                           icon: const Icon(Icons.play_arrow_rounded,
                               color: Colors.white),
-                          color: CustomColor.gray700,
+                          color: CustomColor.black700,
                         ),
                         const SizedBox(height: 20),
                         PodcastWidget(
-                          img: "assets/avanade.jpg",
-                          title: "Avanade",
-                          description: "Como é trabalhar na Avanade",
+                          img: "assets/egokill.jpg",
+                          title: "Ego Kill Talent",
+                          description: "banda nacional",
                           click: () {},
                           icon: Icon(Icons.play_arrow_rounded,
                               color: Colors.white),
-                          color: CustomColor.gray700,
+                          color: CustomColor.black700,
                         ),
                         const SizedBox(height: 20),
                         PodcastWidget(
-                          img: "assets/avanade.jpg",
-                          title: "Avanade",
-                          description: "Como é trabalhar na Avanade",
+                          img: "assets/Mastodon.jpg",
+                          title: "Mastodon",
+                          description: "nova banda de heavy metal",
                           click: () {},
                           icon: Icon(Icons.play_arrow_rounded,
                               color: Colors.white),
-                          color: CustomColor.gray700,
-                        ),
-                        const SizedBox(height: 20),
-                        PodcastWidget(
-                          img: "assets/avanade.jpg",
-                          title: "Avanade",
-                          description: "Como é trabalhar na Avanade",
-                          click: () {},
-                          icon: Icon(Icons.play_arrow_rounded,
-                              color: Colors.white),
-                          color: CustomColor.gray700,
+                          color: CustomColor.black700,
                         ),
                       ],
                     ),
@@ -238,7 +231,7 @@ class _HomePageState extends State<HomePage> {
                           decoration: BoxDecoration(
                             gradient: const LinearGradient(
                               colors: [
-                                CustomColor.gray700,
+                                CustomColor.black700,
                                 CustomColor.gray200
                               ],
                               begin: Alignment.bottomRight,
@@ -247,7 +240,7 @@ class _HomePageState extends State<HomePage> {
                             boxShadow: [
                               BoxShadow(
                                 offset: const Offset(0, 20),
-                                color: CustomColor.gray700.withOpacity(0.4),
+                                color: CustomColor.black700.withOpacity(0.4),
                                 blurRadius: 40,
                               )
                             ],
@@ -292,7 +285,7 @@ class _HomePageState extends State<HomePage> {
                                 width: 30,
                                 height: 30,
                                 decoration: BoxDecoration(
-                                  color: CustomColor.pink700,
+                                  color: CustomColor.red700,
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 child: Icon(
@@ -324,7 +317,7 @@ class BottonNavigator extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      selectedItemColor: CustomColor.pink700,
+      selectedItemColor: CustomColor.red700,
       selectedFontSize: 13,
       unselectedFontSize: 13,
       iconSize: 30,
