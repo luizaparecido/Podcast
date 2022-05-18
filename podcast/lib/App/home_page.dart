@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:podcast/App/podcast_screen.dart';
@@ -16,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey,
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -34,7 +36,7 @@ class _HomePageState extends State<HomePage> {
                       alignment: Alignment.centerRight,
                       children: [
                         SvgPicture.asset("assets/rock.svg",
-                            width: 40, height: 40)
+                            width: 50, height: 50)
                       ],
                     ),
                     Row(
@@ -139,7 +141,7 @@ class _HomePageState extends State<HomePage> {
                           },
                           icon: Icon(
                             isplaying ? Icons.pause : Icons.play_arrow,
-                            color: Colors.white,
+                            color: Colors.green,
                           ),
                           color: isplaying
                               ? CustomColor.red700
@@ -151,9 +153,9 @@ class _HomePageState extends State<HomePage> {
                           title: "Iron Maiden",
                           description: "Heavy Metal",
                           click: () {},
-                          icon:  Icon(
+                          icon:  const Icon(
                             Icons.play_arrow,
-                            color: Colors.white,
+                            color: Colors.green,
                           ),
                           color: CustomColor.black700,
                         ),
@@ -163,8 +165,8 @@ class _HomePageState extends State<HomePage> {
                           title: "Led Zeppelin",
                           description: "Rock and Roll",
                           click: () {},
-                          icon:  Icon(Icons.play_arrow_rounded,
-                              color: Colors.white),
+                          icon:  const Icon(Icons.play_arrow_rounded,
+                              color: Colors.green),
                           color: CustomColor.black700,
                         ),
                         const SizedBox(height: 20),
@@ -173,8 +175,8 @@ class _HomePageState extends State<HomePage> {
                           title: "Metallica",
                           description: "Trash Metal",
                           click: () {},
-                          icon: Icon(Icons.play_arrow_rounded,
-                              color: Colors.white),
+                          icon: const Icon(Icons.play_arrow_rounded,
+                              color: Colors.green),
                           color: CustomColor.black700,
                         ),
                         const SizedBox(height: 20),
@@ -184,7 +186,7 @@ class _HomePageState extends State<HomePage> {
                           description: "nova banda de rock n roll",
                           click: () {},
                           icon: const Icon(Icons.play_arrow_rounded,
-                              color: Colors.white),
+                              color: Colors.green),
                           color: CustomColor.black700,
                         ),
                         const SizedBox(height: 20),
@@ -193,8 +195,8 @@ class _HomePageState extends State<HomePage> {
                           title: "Ego Kill Talent",
                           description: "banda nacional",
                           click: () {},
-                          icon: Icon(Icons.play_arrow_rounded,
-                              color: Colors.white),
+                          icon: const Icon(Icons.play_arrow_rounded,
+                              color: Colors.green),
                           color: CustomColor.black700,
                         ),
                         const SizedBox(height: 20),
@@ -204,7 +206,7 @@ class _HomePageState extends State<HomePage> {
                           description: "nova banda de heavy metal",
                           click: () {},
                           icon: const Icon(Icons.play_arrow_rounded,
-                              color: Colors.white),
+                              color: Colors.green),
                           color: CustomColor.black700,
                         ),
                       ],
@@ -384,7 +386,7 @@ class PodcastWidget extends StatelessWidget {
                 ),
                 Text(
                   description,
-                  style: const TextStyle(color: Colors.grey),
+                  style: const TextStyle(color: Colors.red),
                 )
               ],
             )
